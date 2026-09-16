@@ -1,0 +1,15 @@
+{
+  "name": "berni-skills",
+  "description": "Marketplace personal de skills para Claude Code.",
+  "owner": {
+    "name": "berni08-ai"
+  },
+  "plugins": [
+    {
+      "name": "mis-skills",
+      "description": "Colección personal de skills para Claude Code.",
+      "version": "0.1.0",
+      "source": "./"
+    }
+  ]
+}

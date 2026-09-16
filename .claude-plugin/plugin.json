@@ -1,0 +1,13 @@
+{
+  "name": "mis-skills",
+  "description": "Colección personal de skills para Claude Code.",
+  "version": "0.1.0",
+  "author": {
+    "name": "berni08-ai"
+  },
+  "homepage": "https://github.com/berni08-ai/SKILLS",
+  "repository": "https://github.com/berni08-ai/SKILLS",
+  "keywords": [
+    "skills"
+  ]
+}
