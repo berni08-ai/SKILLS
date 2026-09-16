@@ -2,6 +2,21 @@
 
 Colección personal de skills para Claude Code.
 
+## Inicio rápido
+
+Ejecuta estos comandos dentro de Claude Code, en cualquier proyecto.
+
+```
+/plugin marketplace add obra/superpowers-marketplace
+/plugin install superpowers@superpowers-marketplace
+/plugin marketplace add berni08-ai/SKILLS
+/plugin install mis-skills@berni-skills
+```
+
+Reinicia Claude Code. Ya tienes las 14 skills de superpowers más las tuyas.
+
+Una vez por máquina. No hace falta repetirlo en cada proyecto.
+
 ## Qué es una skill
 
 Una skill es una carpeta con un archivo `SKILL.md`.
@@ -93,24 +108,19 @@ Repo: https://github.com/obra/superpowers
 Es un plugin de marketplace con 14 skills.
 Usa el Método A.
 
-Opción 1, marketplace del autor. **Verificada. Funciona siempre.**
+Instálalo con el marketplace del autor:
 
 ```
 /plugin marketplace add obra/superpowers-marketplace
 /plugin install superpowers@superpowers-marketplace
 ```
 
-Opción 2, marketplace oficial de Anthropic. La recomienda el README del autor.
+Esta ruta está verificada. Funciona en local y en sesiones remotas.
 
-```
-/plugin install superpowers@claude-plugins-official
-```
-
-Aviso sobre la opción 2: falló en una sesión remota de Claude Code.
-El marketplace `claude-plugins-official` no estaba registrado en el contenedor.
+El README del autor también ofrece `superpowers@claude-plugins-official`.
+Esa ruta falló en una sesión remota de Claude Code.
 Error exacto: `Plugin "superpowers" not found in marketplace "claude-plugins-official"`.
-
-Prueba la opción 2 en tu máquina local. Si falla, usa la opción 1.
+No la uses.
 
 Skills que instala:
 
