@@ -140,6 +140,19 @@ Instala una sola skill de superpowers así:
 ./scripts/instalar-skill.sh obra/superpowers skills/brainstorming
 ```
 
+## Skills incluidas en mis-skills
+
+| Skill | Origen | Licencia |
+|---|---|---|
+| `ejemplo-skill` | Propia | — |
+| `frontend-design` | [anthropics/skills](https://github.com/anthropics/skills/tree/main/skills/frontend-design) | Apache 2.0 |
+
+`frontend-design` da criterio de diseño visual al construir interfaces.
+Se copió sin modificaciones. Su `LICENSE.txt` viaja en la misma carpeta.
+
+El repo original agrupa esa skill dentro del plugin `example-skills`.
+Ese plugin trae 12 skills. Aquí solo está la que pediste.
+
 ## Usar estas skills en tus proyectos
 
 Este repo es un **marketplace propio**. Instálalo como plugin.
