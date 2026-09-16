@@ -202,6 +202,43 @@ Reinicia Claude Code para aplicar los cambios.
 
 Usa el marketplace propio. Es el único método que se actualiza solo.
 
+## Si usas Claude Code en la web
+
+Las sesiones web borran los plugins al cerrar.
+No repitas los comandos `/plugin` en cada sesión.
+Usa un archivo de configuración dentro de cada proyecto.
+
+### Pasos, una vez por proyecto
+
+1. Crea la carpeta `.claude/` en la raíz del proyecto.
+2. Copia `plantillas/settings.json` a `.claude/settings.json`.
+3. Haz commit y push de ese archivo.
+4. Abre una sesión nueva en ese proyecto.
+
+Claude Code instala y habilita los plugins solo.
+
+### Contenido de la plantilla
+
+```json
+{
+  "extraKnownMarketplaces": {
+    "superpowers-marketplace": {
+      "source": { "source": "github", "repo": "obra/superpowers-marketplace" }
+    },
+    "berni-skills": {
+      "source": { "source": "github", "repo": "berni08-ai/SKILLS" }
+    }
+  },
+  "enabledPlugins": {
+    "superpowers@superpowers-marketplace": true,
+    "mis-skills@berni-skills": true
+  }
+}
+```
+
+Prueba realizada: abrí una sesión en un proyecto con ese archivo.
+Claude registró `mis-skills@berni-skills` con alcance de proyecto, sin comandos.
+
 ## Permanencia: qué se guarda y qué no
 
 Claude Code escribe en dos lugares distintos.
@@ -281,4 +318,6 @@ skills/
     SKILL.md           Una carpeta por skill.
 scripts/
   instalar-skill.sh    Copia una skill suelta desde otro repo.
+plantillas/
+  settings.json        Copia este archivo a .claude/ de cada proyecto.
 ```
