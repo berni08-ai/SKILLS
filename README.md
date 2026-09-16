@@ -124,6 +124,43 @@ Instala una sola skill de superpowers así:
 ./scripts/instalar-skill.sh obra/superpowers skills/brainstorming
 ```
 
+## Permanencia: qué se guarda y qué no
+
+Claude Code escribe en dos lugares distintos.
+
+| Qué | Dónde queda | ¿Sobrevive? |
+|---|---|---|
+| Archivos del repo | `/tu-repo/` → GitHub | Sí, para siempre |
+| Config de proyecto | `/tu-repo/.claude/settings.json` | Sí, si haces commit |
+| Plugin instalado | `~/.claude/plugins/` | No en sesiones remotas |
+| Config de usuario | `~/.claude/settings.json` | No en sesiones remotas |
+
+El repo vive en GitHub. `~/.claude/` vive en tu máquina o en el contenedor.
+
+Las sesiones remotas (Claude Code web) usan un contenedor nuevo cada vez.
+Ese contenedor borra `~/.claude/` al terminar.
+Tu máquina local no tiene ese problema.
+
+### Solución: instalar con alcance de proyecto
+
+```bash
+claude plugin marketplace add OWNER/REPO --scope project
+claude plugin install NOMBRE@MARKETPLACE --scope project
+```
+
+Esos comandos escriben `.claude/settings.json` dentro del repo.
+
+```bash
+git add .claude/settings.json
+git commit -m "Habilita el plugin en el proyecto"
+git push
+```
+
+Claude Code lee ese archivo al abrir el proyecto.
+Instala y habilita el plugin solo, en cualquier máquina o sesión.
+
+Este repo ya tiene superpowers configurado así.
+
 ## Verificar la instalación
 
 ```bash
