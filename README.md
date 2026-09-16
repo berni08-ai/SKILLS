@@ -93,18 +93,24 @@ Repo: https://github.com/obra/superpowers
 Es un plugin de marketplace con 14 skills.
 Usa el Método A.
 
-Opción 1, marketplace oficial de Anthropic:
-
-```
-/plugin install superpowers@claude-plugins-official
-```
-
-Opción 2, marketplace del autor:
+Opción 1, marketplace del autor. **Verificada. Funciona siempre.**
 
 ```
 /plugin marketplace add obra/superpowers-marketplace
 /plugin install superpowers@superpowers-marketplace
 ```
+
+Opción 2, marketplace oficial de Anthropic. La recomienda el README del autor.
+
+```
+/plugin install superpowers@claude-plugins-official
+```
+
+Aviso sobre la opción 2: falló en una sesión remota de Claude Code.
+El marketplace `claude-plugins-official` no estaba registrado en el contenedor.
+Error exacto: `Plugin "superpowers" not found in marketplace "claude-plugins-official"`.
+
+Prueba la opción 2 en tu máquina local. Si falla, usa la opción 1.
 
 Skills que instala:
 
