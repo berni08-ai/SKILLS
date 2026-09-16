@@ -124,6 +124,68 @@ Instala una sola skill de superpowers así:
 ./scripts/instalar-skill.sh obra/superpowers skills/brainstorming
 ```
 
+## Usar estas skills en tus proyectos
+
+Este repo es un **marketplace propio**. Instálalo como plugin.
+
+### Instalación en cualquier proyecto
+
+Dentro de Claude Code:
+
+```
+/plugin marketplace add berni08-ai/SKILLS
+/plugin install mis-skills@berni-skills
+```
+
+Desde la terminal:
+
+```bash
+claude plugin marketplace add berni08-ai/SKILLS
+claude plugin install mis-skills@berni-skills
+```
+
+Un comando por máquina. Las skills quedan disponibles en todos tus proyectos.
+
+### Instalación fijada a un proyecto
+
+Usa `--scope project` para que el proyecto instale las skills solo.
+
+```bash
+claude plugin marketplace add berni08-ai/SKILLS --scope project
+claude plugin install mis-skills@berni-skills --scope project
+git add .claude/settings.json
+git commit -m "Habilita mis-skills en el proyecto"
+git push
+```
+
+Cualquier persona que abra ese proyecto recibe las skills.
+
+### Agregar una skill nueva
+
+1. Crea la carpeta `skills/mi-skill/` con su `SKILL.md`.
+2. Sube la versión en `.claude-plugin/plugin.json` y en `.claude-plugin/marketplace.json`.
+3. Valida: `claude plugin validate .`
+4. Haz commit y push.
+
+### Actualizar las skills en tus proyectos
+
+```bash
+claude plugin marketplace update berni-skills
+claude plugin update mis-skills
+```
+
+Reinicia Claude Code para aplicar los cambios.
+
+### Comparación de métodos
+
+| Método | Comandos por proyecto | Actualiza | Sirve en sesiones remotas |
+|---|---|---|---|
+| Marketplace propio | 2, una sola vez por máquina | Sí | Sí, con `--scope project` |
+| Copiar a `~/.claude/skills/` | 1 por skill | No | No |
+| Copiar a `.claude/skills/` | 1 por skill y por proyecto | No | Sí |
+
+Usa el marketplace propio. Es el único método que se actualiza solo.
+
 ## Permanencia: qué se guarda y qué no
 
 Claude Code escribe en dos lugares distintos.
@@ -193,9 +255,14 @@ Guarda tus skills en este repo para conservarlas.
 ## Estructura de este repo
 
 ```
+.claude-plugin/
+  plugin.json          Manifiesto del plugin.
+  marketplace.json     Manifiesto del marketplace.
+.claude/
+  settings.json        Plugins habilitados en este proyecto.
 skills/
   ejemplo-skill/
-    SKILL.md
+    SKILL.md           Una carpeta por skill.
 scripts/
-  instalar-skill.sh
+  instalar-skill.sh    Copia una skill suelta desde otro repo.
 ```
