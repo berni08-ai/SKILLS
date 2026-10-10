@@ -13,7 +13,7 @@ No hay comandos que ejecutar. No hay plugins que instalar.
 | Origen | Skills | Para qué |
 |---|---|---|
 | propia | `ejemplo-skill` | Plantilla para crear skills propias. |
-| [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) | `design-taste-frontend`, `design-taste-frontend-v1`, `gpt-taste`, `high-end-visual-design`, `minimalist-ui`, `industrial-brutalist-ui`, `redesign-existing-projects`, `stitch-design-taste`, `image-to-code`, `imagegen-frontend-web`, `imagegen-frontend-mobile`, `brandkit`, `full-output-enforcement` | Diseño frontend que no parezca plantilla. |
+| [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) | `design-taste-frontend`, `redesign-existing-projects`, `high-end-visual-design` | Diseño frontend que no parezca plantilla. Solo 3 de las 13: las otras se pisaban entre sí. |
 | [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md) + [google-labs-code/design.md](https://github.com/google-labs-code/design.md) | `design-md` | Spec de DESIGN.md + 74 ejemplos de marcas. Ninguno de los dos repos trae skill: la armé yo con su contenido. |
 | [nateherkai/scroll-craft](https://github.com/nateherkai/scroll-craft) | `scroll-craft` | Landings con scroll cinematográfico. Verifica con Playwright. |
 | [blader/humanizer](https://github.com/blader/humanizer) | `humanizer` | Quita marcas de texto escrito por IA. |
