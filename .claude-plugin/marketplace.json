@@ -8,10 +8,31 @@
     {
       "name": "mis-skills",
       "description": "Colección personal de skills para Claude Code.",
-      "version": "0.4.0",
+      "version": "0.6.0",
       "source": "./",
       "skills": [
-        "./.claude/skills/ejemplo-skill"
+        "./.claude/skills/chrome-extensions",
+        "./.claude/skills/detecting-malicious-npm-packages",
+        "./.claude/skills/ejemplo-skill",
+        "./.claude/skills/exploiting-server-side-request-forgery",
+        "./.claude/skills/exploiting-sql-injection-vulnerabilities",
+        "./.claude/skills/hunting-credential-stuffing-attacks",
+        "./.claude/skills/implementing-api-rate-limiting-and-throttling",
+        "./.claude/skills/implementing-cloud-waf-rules",
+        "./.claude/skills/implementing-secret-scanning-with-gitleaks",
+        "./.claude/skills/modern-web-guidance",
+        "./.claude/skills/performing-csrf-attack-simulation",
+        "./.claude/skills/performing-security-headers-audit",
+        "./.claude/skills/performing-web-application-penetration-test",
+        "./.claude/skills/testing-api-authentication-weaknesses",
+        "./.claude/skills/testing-api-for-broken-object-level-authorization",
+        "./.claude/skills/testing-api-security-with-owasp-top-10",
+        "./.claude/skills/testing-cors-misconfiguration",
+        "./.claude/skills/testing-for-broken-access-control",
+        "./.claude/skills/testing-for-business-logic-vulnerabilities",
+        "./.claude/skills/testing-for-xss-vulnerabilities",
+        "./.claude/skills/testing-jwt-token-security",
+        "./.claude/skills/validating-backup-integrity-for-recovery"
       ]
     }
   ]
